@@ -1,0 +1,6 @@
+rgname = "rgtf"
+rglocation = "East US"
+vnetname = "vnet1tf"
+subnetname = "subnet1tf"
+vnet_cidr = "10.10.0.0/16"
+subnet_cidr = "10.10.1.0/24"
