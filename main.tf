@@ -34,7 +34,7 @@ resource "azurerm_virtual_network" "vnet1" {
   address_space       = ["${var.vnet_cidr}"]
 }
 
-
+# Create a subnet within the virtual network
 resource "azurerm_subnet" "subnet1" {
   name                 = "${var.subnetname}"
   resource_group_name  = azurerm_resource_group.rg1.name
@@ -42,6 +42,7 @@ resource "azurerm_subnet" "subnet1" {
   address_prefixes     = ["${var.subnet_cidr}"]
 }
 
+# create a network security group
 resource "azurerm_network_security_group" "nsg" {
   name                = "${var.nsgname}"
   location            = azurerm_resource_group.rg1.location
